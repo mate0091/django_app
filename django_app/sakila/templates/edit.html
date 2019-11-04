@@ -7,44 +7,44 @@
         <link rel="stylesheet" href="{% static 'css/style.css' %}"/>  
     </head>  
     <body>  
-    <form method="POST" class="post-form" action="/emp">  
+    <form method="POST" class="post-form" action="/update/{{employee.id}}">  
             {% csrf_token %}  
         <div class="container">  
     <br>  
         <div class="form-group row">  
         <label class="col-sm-1 col-form-label"></label>  
         <div class="col-sm-4">  
-        <h3>Enter Details</h3>  
+        <h3>Update Details</h3>  
         </div>  
       </div>  
         <div class="form-group row">  
         <label class="col-sm-2 col-form-label">Actor Id:</label>  
         <div class="col-sm-4">  
-          {{ form.actor_id }}  
+            <input type="text" name="actor_id" id="id_actor_id" required maxlength="20" value="{{ actor.actor_id }}"/>  
         </div>  
       </div>  
       <div class="form-group row">  
-        <label class="col-sm-2 col-form-label">Actor first name:</label>  
+        <label class="col-sm-2 col-form-label">First Name:</label>  
         <div class="col-sm-4">  
-          {{ form.first_name }}  
+            <input type="text" name="first_name" id="id_first_name" required maxlength="100" value="{{ actor.first_name }}" />  
         </div>  
       </div>  
         <div class="form-group row">  
-        <label class="col-sm-2 col-form-label">Actor last name:</label>  
+        <label class="col-sm-2 col-form-label">Last Name:</label>  
         <div class="col-sm-4">  
-          {{ form.last_name }}  
+            <input type="text" name="last_name" id="id_last_name" required maxlength="254" value="{{ actor.last_name }}" />  
         </div>  
       </div>  
         <div class="form-group row">  
-        <label class="col-sm-2 col-form-label">Last updated:</label>  
+        <label class="col-sm-2 col-form-label">Last Update:</label>  
         <div class="col-sm-4">  
-          {{ form.last_update }}  
+            <input type="date" name="last_update" id="id_last_update" required maxlength="15" value="{{ actor.last_update }}" />  
         </div>  
       </div>  
         <div class="form-group row">  
         <label class="col-sm-1 col-form-label"></label>  
         <div class="col-sm-4">  
-        <button type="submit" class="btn btn-primary">Submit</button>  
+        <button type="submit" class="btn btn-success">Update</button>  
         </div>  
       </div>  
         </div>  
