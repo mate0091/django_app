@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django_app.sakila import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("act", views.act),
+    path("show", views.show_actor),
+    path("edit/<int:id>", views.edit_actor),
+    path("update/<int:id>", views.update_actor),
+    path("delete/<int:id>", views.destroy_actor),
 ]
