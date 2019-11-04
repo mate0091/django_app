@@ -1,0 +1,109 @@
+    <!DOCTYPE html>  
+    <html lang="en">  
+    <head>  
+        <meta charset="UTF-8">  
+        <title>Index</title>  
+        {% load staticfiles %}  
+        <link rel="stylesheet" href="{% static 'css/style.css' %}"/>  
+    </head>  
+    <body>  
+    <form method="POST" class="post-form" action="/emp">  
+            {% csrf_token %}  
+        <div class="container">  
+    <br>  
+        <div class="form-group row">  
+        <label class="col-sm-1 col-form-label"></label>  
+        <div class="col-sm-4">  
+        <h3>Enter Details</h3>  
+        </div>  
+      </div>  
+        <div class="form-group row">  
+        <label class="col-sm-2 col-form-label">Film Id:</label>  
+        <div class="col-sm-4">  
+          {{ form.film_id }}  
+        </div>  
+      </div>  
+      <div class="form-group row">  
+        <label class="col-sm-2 col-form-label">Title:</label>  
+        <div class="col-sm-4">  
+          {{ form.title }}  
+        </div>  
+      </div>  
+        <div class="form-group row">  
+        <label class="col-sm-2 col-form-label">Description:</label>  
+        <div class="col-sm-4">  
+          {{ form.description }}  
+        </div>  
+      </div>  
+        <div class="form-group row">  
+        <label class="col-sm-2 col-form-label">Released:</label>  
+        <div class="col-sm-4">  
+          {{ form.release_year }}  
+        </div>  
+      </div>
+      </div>  
+        <div class="form-group row">  
+        <label class="col-sm-2 col-form-label">Language:</label>  
+        <div class="col-sm-4">  
+          {{ form.language }}  
+        </div>  
+      </div>
+      </div>  
+        <div class="form-group row">  
+        <label class="col-sm-2 col-form-label">Rented for:</label>  
+        <div class="col-sm-4">  
+          {{ form.rental_duration }}  
+        </div>  
+      </div>
+      </div>  
+        <div class="form-group row">  
+        <label class="col-sm-2 col-form-label">Rental rate:</label>  
+        <div class="col-sm-4">  
+          {{ form.rental_rate }}  
+        </div>  
+      </div>  
+      </div>  
+        <div class="form-group row">  
+        <label class="col-sm-2 col-form-label">Length:</label>  
+        <div class="col-sm-4">  
+          {{ form.length }}  
+        </div>  
+      </div>  
+      </div>  
+        <div class="form-group row">  
+        <label class="col-sm-2 col-form-label">Replacement cost:</label>  
+        <div class="col-sm-4">  
+          {{ form.replacement_cost }}  
+        </div>  
+      </div>
+      </div>  
+        <div class="form-group row">  
+        <label class="col-sm-2 col-form-label">Rating:</label>  
+        <div class="col-sm-4">  
+          {{ form.rating }}  
+        </div>  
+      </div>
+      </div>  
+        <div class="form-group row">  
+        <label class="col-sm-2 col-form-label">Special features:</label>  
+        <div class="col-sm-4">  
+          {{ form.special_features }}  
+        </div>  
+      </div>
+      </div>  
+        <div class="form-group row">  
+        <label class="col-sm-2 col-form-label">Last updated:</label>  
+        <div class="col-sm-4">  
+          {{ form.last_update }}  
+        </div>  
+      </div>    
+        <div class="form-group row">  
+        <label class="col-sm-1 col-form-label"></label>  
+        <div class="col-sm-4">  
+        <button type="submit" class="btn btn-primary">Submit</button>  
+        </div>  
+      </div>  
+        </div>  
+    </form>  
+    </body>  
+    </html>  
