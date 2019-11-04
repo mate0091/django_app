@@ -25,6 +25,10 @@ urlpatterns = [
     path("update/<int:id>", views.update_actor),
     path("delete/<int:id>", views.destroy_actor),
 
-    path("flm", views.flm)
-    path("film_show", views.show_film)
+    path("flm", views.flm),
+    path("film_show", views.show_film),
+    path("film_edit/<int:id>", views.edit_film),
+    path("film_update/<int:id>", views.update_film),
+    path("film_delete/<int:id>", views.destroy_film),
+
 ]

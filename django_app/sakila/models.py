@@ -19,7 +19,6 @@ class Film(models.Model):
     description = models.TextField(blank=True, null=True)
     release_year = models.TextField(blank=True, null=True)  # This field type is a guess.
     language = models.ForeignKey('Language', models.DO_NOTHING)
-    original_language = models.ForeignKey('Language', models.DO_NOTHING, blank=True, null=True)
     rental_duration = models.PositiveIntegerField()
     rental_rate = models.DecimalField(max_digits=4, decimal_places=2)
     length = models.PositiveSmallIntegerField(blank=True, null=True)

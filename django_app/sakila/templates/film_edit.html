@@ -5,7 +5,7 @@
         <title>Index</title>  
     </head>  
     <body>  
-    <form method="POST" class="post-form" action="/update/{{actor.actor_id}}">  
+    <form method="POST" class="post-form" action="/film_update/{{film.film_id}}">
             {% csrf_token %}  
         <div class="container">  
     <br>  
@@ -41,7 +41,7 @@
 	<div class="form-group row">  
         <label class="col-sm-2 col-form-label">Language:</label>  
         <div class="col-sm-4">  
-            <input type="text" name="language" id="id_language" required maxlength="15" value="{{ film.lanugage }}" />  
+            <input type="text" name="language" id="id_language" required maxlength="15" value="{{ film.language }}" />
         </div>  
 	<div class="form-group row">  
         <label class="col-sm-2 col-form-label">Rented for:</label>  
@@ -85,7 +85,7 @@
         <button type="submit" class="btn btn-success">Update</button>  
         </div>  
       </div>  
-        </div>  
+    </div>
     </form>  
     </body>  
     </html>  
