@@ -26,12 +26,12 @@ def show_actor(request):
 
 def edit_actor(request, id):
 
-    actor = Actor.objects.get(id=id)
+    actor = Actor.objects.get(actor_id=id)
     return render(request, "edit.html", {"actor": actor})
 
 def update_actor(request, id):
 
-    actor = Actor.objects.get(id=id)
+    actor = Actor.objects.get(actor_id=id)
     form = ActorForm(request.POST, instance=actor)
 
     if form.is_valid():
@@ -42,6 +42,6 @@ def update_actor(request, id):
 
 def destroy_actor(request, id):
 
-    actor = Actor.objects.get(id=id)
+    actor = Actor.objects.get(actor_id=id)
     actor.delete()
     return redirect("/show")

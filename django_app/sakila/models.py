@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class Actor(models.Model):
 
-    actor_id = models.PositiveSmallIntegerField(primary_key=True)
+    actor_id = models.AutoField(primary_key=True)
     first_name = models.CharField(max_length=45)
     last_name = models.CharField(max_length=45)
     last_update = models.DateTimeField()
@@ -13,7 +13,7 @@ class Actor(models.Model):
         db_table = 'actor'
 
 class Film(models.Model):
-    film_id = models.PositiveSmallIntegerField(primary_key=True)
+    film_id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=255)
     description = models.TextField(blank=True, null=True)
     release_year = models.TextField(blank=True, null=True)  # This field type is a guess.
