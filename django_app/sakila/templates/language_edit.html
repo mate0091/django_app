@@ -1,0 +1,46 @@
+    <!DOCTYPE html>  
+    <html lang="en">  
+    <head>  
+        <meta charset="UTF-8">  
+        <title>Index</title>  
+    </head>  
+    <body>  
+    <form method="POST" class="post-form" action="/update/{{language.language_id}}">  
+            {% csrf_token %}  
+        <div class="container">  
+    <br>  
+        <div class="form-group row">  
+        <label class="col-sm-1 col-form-label"></label>  
+        <div class="col-sm-4">  
+        <h3>Update Details</h3>  
+        </div>  
+      </div>  
+        <div class="form-group row">  
+        <label class="col-sm-2 col-form-label">Lanugage ID:</label>  
+        <div class="col-sm-4">  
+            <input type="text" name="language_id" id="id_language_id" required maxlength="20" value="{{ language.language_id }}"/>  
+        </div>  
+      </div>  
+      <div class="form-group row">  
+        <label class="col-sm-2 col-form-label">Name:</label>  
+        <div class="col-sm-4">  
+            <input type="text" name="name" id="id_name" required maxlength="50" value="{{ language.name }}" />  
+        </div>  
+      </div>  
+      </div>  
+        <div class="form-group row">  
+        <label class="col-sm-2 col-form-label">Last Update:</label>  
+        <div class="col-sm-4">  
+            <input type="date" name="last_update" id="id_last_update" required maxlength="15" value="{{ language.last_update }}" />  
+        </div>  
+      </div>  
+        <div class="form-group row">  
+        <label class="col-sm-1 col-form-label"></label>  
+        <div class="col-sm-4">  
+        <button type="submit" class="btn btn-success">Update</button>  
+        </div>  
+      </div>  
+        </div>  
+    </form>  
+    </body>  
+    </html>  
