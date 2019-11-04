@@ -45,3 +45,7 @@ def destroy_actor(request, id):
     actor = Actor.objects.get(actor_id=id)
     actor.delete()
     return redirect("/show")
+
+def show_film(request):
+    films = Film.objects.all()
+    return render(request, "film_show.html", {"films": films})
