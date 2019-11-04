@@ -24,4 +24,7 @@ urlpatterns = [
     path("edit/<int:id>", views.edit_actor),
     path("update/<int:id>", views.update_actor),
     path("delete/<int:id>", views.destroy_actor),
+
+    path("flm", views.flm)
+    path("film_show", views.show_film)
 ]

@@ -46,6 +46,20 @@ def destroy_actor(request, id):
     actor.delete()
     return redirect("/show")
 
+def flm(request):
+    if request.method == "POST":
+        form = ActorForm(request.POST)
+        if form.is_valid():
+            try:
+                form.save()
+                return redirect("/show_film")
+            except:
+                pass
+    else:
+        form = ActorForm()
+
+    return render(request, "film_index.html", {"form": form})
+
 def show_film(request):
     films = Film.objects.all()
-    return render(request, "film_show.html", {"films": films})
+    return render(request, "film_show.html", {"film": films})
