@@ -2,10 +2,15 @@
     <html lang="en">  
     <head>  
         <meta charset="UTF-8">  
-        <title>Index</title>  
+        <title>Index</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
     </head>  
     <body>  
-    <form method="POST" class="post-form" action="/film_update/{{film.film_id}}">
+    <form method="POST" class="post-form" action="/film_update/{{ film.film_id }}">
             {% csrf_token %}  
         <div class="container">  
     <br>  
@@ -36,28 +41,33 @@
         <div class="form-group row">  
         <label class="col-sm-2 col-form-label">Released:</label>  
         <div class="col-sm-4">  
-            <input type="date" name="release_year" id="id_release_year" required maxlength="15" value="{{ film.release_year }}" />  
+            <input type="text" name="release_year" id="id_release_year" required maxlength="15" value="{{ film.release_year }}" />
+        </div>
         </div>
 	<div class="form-group row">  
         <label class="col-sm-2 col-form-label">Language:</label>  
         <div class="col-sm-4">  
             <input type="text" name="language" id="id_language" required maxlength="15" value="{{ film.language }}" />
-        </div>  
+        </div>
+    </div>
 	<div class="form-group row">  
         <label class="col-sm-2 col-form-label">Rented for:</label>  
         <div class="col-sm-4">  
-            <input type="text" name="rental_duration" id="id_rental_duration" required maxlength="15" value="{{ film.rental_duration" />  
-        </div>  
+            <input type="text" name="rental_duration" id="id_rental_duration" required maxlength="15" value="{{ film.rental_duration }}" />
+        </div>
+    </div>
 	<div class="form-group row">  
         <label class="col-sm-2 col-form-label">Rental rate:</label>  
         <div class="col-sm-4">  
             <input type="text" name="rental_rate" id="id_rental_rate" required maxlength="15" value="{{ film.rental_rate }}" />  
         </div>
+    </div>
 	<div class="form-group row">  
         <label class="col-sm-2 col-form-label">Length:</label>  
         <div class="col-sm-4">  
             <input type="text" name="length" id="id_length" required maxlength="15" value="{{ film.length }}" />  
         </div>
+    </div>
 	<div class="form-group row">  
         <label class="col-sm-2 col-form-label">Cost:</label>  
         <div class="col-sm-4">  
@@ -68,24 +78,27 @@
         <label class="col-sm-2 col-form-label">Rating:</label>  
         <div class="col-sm-4">  
             <input type="text" name="rating" id="id_rating" required maxlength="15" value="{{ film.rating }}" />
+        </div>
+    </div>
 	<div class="form-group row">  
         <label class="col-sm-2 col-form-label">Special features:</label>  
         <div class="col-sm-4">  
             <input type="text" name="special_features" id="id_special_features" required maxlength="15" value="{{ film.special_features }}" />  
         </div>
+    </div>
 	<div class="form-group row">  
         <label class="col-sm-2 col-form-label">Last update:</label>  
         <div class="col-sm-4">  
-            <input type="date" name="last_update" id="id_last_update" required maxlength="15" value="{{ film.last_update }}" />  
-        </div> 
+            <input type="date" name="last_update" id="id_last_update" required maxlength="15" value="{{ film.last_update }}" />
         </div>
         <div class="form-group row">  
-        <label class="col-sm-1 col-form-label"></label>  
-        <div class="col-sm-4">  
-        <button type="submit" class="btn btn-success">Update</button>  
-        </div>  
-      </div>  
+        <label class="col-sm-1 col-form-label"></label>
+        <div class="col-sm-4">
+        <button type="submit" class="btn btn-success">Update</button>
+        </div>
+      </div>
     </div>
+        </div>
     </form>  
     </body>  
     </html>  
